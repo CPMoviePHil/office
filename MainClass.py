@@ -53,8 +53,8 @@ class MainClass:
         pass
 
 
-main1 = MainClass()
-main1.set_directory_path_s(['scanner_logs', 'update_code_logs'])
-# main1.set_directory_path_s(['scanner-lock']) #本機測試
-main1.set_pattern(r"log.log.(\d{4})-(\d{2})-(\d{2})$")
-main1.run_deleting_file()
+if __name__ == '__main__':
+    main1 = MainClass()
+    main1.set_directory_path_s(['scanner-lock'])
+    main1.set_pattern(r"log.log.(\d{4})-(\d{2})-(\d{2})$")
+    main1.run_deleting_file()
